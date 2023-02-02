@@ -38,7 +38,27 @@ function clickButton() {
             } else if(buttons[i].classList.contains('percent')) {
                 inputPercent(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('sign')) {
+            }
+            //code for hw2 
+            else if(buttons[i].classList.contains('sup')) {
+                    inputSup(displayValue);
+                    updateDisplay();
+                }
+            else if(buttons[i].classList.contains('sqrt')){
+                inputSqrt(displayValue);
+                updateDisplay();
+            }
+            else if(buttons[i].classList.contains('ln')){
+                inputLn(displayValue);
+                updateDisplay();
+            }
+            else if(buttons[i].classList.contains('cos')){
+                inputCos(displayValue);
+                updateDisplay();
+            }
+
+            //end
+             else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
             } else if(buttons[i].classList.contains('clear'))
@@ -142,6 +162,25 @@ function inputDecimal(dot) {
 function inputPercent(num) {
     displayValue = (num/100).toString();
 }
+
+
+//adding code for hw2 here
+function inputSup(num){
+    displayValue = (num*num).toString();
+}
+
+function inputSqrt(num){
+    displayValue = ((num**0.5)).toString();
+}
+
+function inputLn(num){
+    displayValue = (Math.log(num)).toString();
+}
+//radians not degrees
+function inputCos(num){
+    displayValue = (Math.cos(num)).toString();
+}
+//done 
 
 function inputSign(num) {
     displayValue = (num * -1).toString();
